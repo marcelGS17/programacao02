@@ -1,0 +1,85 @@
+//Livro Interativo
+import java.util.Scanner;
+public class App {
+public static void main(String[] args) {
+    Scanner escaneador = new Scanner(System.in);
+//O programa começa contando a historia através da váriavel, que foi criada para cada capítulo.
+    String cap01 = 
+    "Você estará na pele do maior detetive de Gotham city o Batman. " +
+    "Na missão de prender o enigmático Charada... " +
+    "Uma certa noite em uma de suas missões Batman consegue entrar no covil do Charada " +
+    "no entanto ao adentrar tudo estava numa calmaria enorme... Mas Batman sem ver acaba pisando em uma de suas armadilhas e acaba caindo... " +
+    "ao acordar pouco tempo depois ele já estava amarrado e sua única forma de escapar seria resolvendo os enigmas... " +
+    "Charada:Eu posso ser fácil ou um beco sem saída. Cuidado quando você me cruzar";
+
+    String cap01escolha01 = 
+    "a rua.";
+    
+    String cap01escolha02 = 
+    "a ponte.";
+
+    String cap01escolha03 = 
+    "a selva.";
+
+    String cap02 = 
+    "Charada: Muito bem mais ainda não é o suficiente Batman... " +
+    "O Batman se vê numa enrascada e começa a pensar em uma forma de escapar... " +
+    "No entanto Charada se aproxima com um tom mais ameaçador e aponta uma arma a sua cabeça. " +
+    "Charada: Me responda Batman... Aqueles que me fazem provavelmente me quebrarão: ";
+
+    String cap02escolha01 =
+    "as leis.";
+
+    String cap02escolha02 =
+    "a sociedade.";   
+
+    String cap03 = 
+    "Ao acertar a pergunta Batman deixa o charada perplexo com sua inteligência... " +
+    "E na mesma hora que ele acerta a pergunta, ele se liberta das algemas, " +
+    "conseguindo dar-lhe uma cabeçada e assim noucatea-lo." +
+    "Parabéns você escapou das garras do charada, salvando Gotham e fazendo o bem prevalecer." +
+    "Fim da história muito bem Morcego!";
+
+    String cap04 =
+    "Quase foi a escolha certa. " +
+    "Mesmo errando a pergunta Batman tenta escapar... " +
+    "Mas mesmo assim Charada consegue disparar contra o Batman! Péssima escolha." ;
+
+    System.out.println(cap01);
+    System.out.println("- " + cap01escolha01);
+    System.out.println("- " + cap01escolha02);
+    System.out.println("- " + cap01escolha03);
+
+    System.out.print("\nDigite: ");
+    String escolha = escaneador.nextLine();
+    System.out.println();
+
+    if(escolha.equalsIgnoreCase(cap01escolha01)) {
+        System.out.println(cap02);
+        System.out.println("- " + cap02escolha01);
+        System.out.println("- " + cap02escolha02);
+
+        System.out.print("\nDigite: ");
+        escolha = escaneador.nextLine();
+        System.out.println();
+
+        if(escolha.equalsIgnoreCase(cap02escolha01)) {
+            System.out.println(cap03);
+        }
+        else if(escolha.equalsIgnoreCase(cap02escolha02)) {
+            System.err.println(cap04);
+        }
+        else {
+            System.out.println("Péssima escolha! Charada dispara a arma na cabeça do Batman.");
+        }
+    }
+    else if(escolha.equalsIgnoreCase(cap01escolha01)) {
+        System.out.println(cap03);
+    }
+    else {
+        System.out.println("escolha errada! Você foi morto e deixou a cidade de GOTHAM CITY nas mãos.");
+    }
+
+    escaneador.close();
+}
+}
