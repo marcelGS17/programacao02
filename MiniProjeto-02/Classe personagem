@@ -1,0 +1,23 @@
+public class Personagem {
+    String nome;
+    int energia;
+    int Poder;
+
+    Personagem(){
+
+    }
+    
+    Personagem(String nome, int energia, int habilidade){
+        this.nome = nome;
+        this.energia = energia;
+        this.Poder = habilidade;
+    }
+
+    void gastar(int gasto){
+        this.Poder -= gasto;
+    }
+
+    void cansaso(int energiaPerdida){
+        this.energia -= energiaPerdida;
+    }
+}
