@@ -1,0 +1,227 @@
+import java.util.Scanner;
+//Programa Mini-Projeto02
+public class App {
+    public static void main(String[] args) throws Exception {
+        Scanner input = new Scanner(System.in);
+
+        boolean chave = false;
+        boolean FinalS = false;
+        boolean FinalB = false;
+        boolean Personagem1 = false;
+        boolean Personagem2 = false;
+        boolean falha = false;
+        boolean policiais = false;
+        boolean abandono = false;
+        boolean desmaio = false;
+        boolean derrotado = false;
+
+        System.out.println("Escolha seu personagem:");
+        System.out.println("Batman:                          Superman:");
+        System.out.println("Energia = 100                     Energia = 100");
+        System.out.println("Pontos de habilidade = 500       Pontos de habilidade = 900");
+
+        while (Personagem1 == false && Personagem2 == false){
+            System.out.println("Digite 'Batman' ou 'Superman'");
+            String x = input.nextLine();
+            if (x.equalsIgnoreCase("Batman")){
+                Personagem1 = true;
+            }
+            else if(x.equalsIgnoreCase("Superman")){
+                Personagem2 = true;
+            }
+            else{
+                System.out.println("Opção inválida");
+            }
+        }
+        
+        Personagem Superman = new Personagem("Superman", 100, 900);
+        Personagem Batman = new Personagem("Batman", 100, 500);
+
+        while (falha == false){
+            System.out.print("Um dia normal em metropolis até que .... Acontece um chamado da liga da justiça precisando de ajuda em outro planeta.");
+            System.out.print("ao receber o chamado alguns lanternas verdes precisam de ajuda para derrotar alguns soldados de Brainiac. ");
+            System.out.println("Você vai atender ao chamado?");
+            while (chave == false){
+                System.out.println("Digite Sim ou Nao");
+                String y = input.nextLine();
+                if (y.equalsIgnoreCase("Sim")){
+                    System.out.print("Você ajudou a salvar os lanternas verdes no entando a ida até la foi bem cansativa, ");
+                    System.out.println("fazendo-o perder energia");
+                    if(Personagem2 == true){
+                        Superman.cansaso(20);
+                        System.out.println("Energia atual: " + Superman.energia);
+                    }
+                    else if (Personagem1 == true){
+                        Batman.cansaso(20);
+                        System.out.println("Energia atual: " + Batman.energia);
+                    }
+                    System.out.println("Com isso seu poder aumentou um pouco ");
+                    if(Personagem2 == true){
+                        Superman.gastar(-300);
+                        System.out.println("Poder atual: " + Superman.Poder);
+                    }
+                    else if (Personagem1 == true){
+                        Batman.gastar(-300);
+                        System.out.println("Poder atual: " + Batman.Poder);
+                    }
+                    chave = true;
+                }
+                else if (y.equalsIgnoreCase("Nao")){
+                    System.out.println("Você ignora o chamado da Justiça");
+                    chave = true;
+                }
+                else{
+                    System.out.println("Opção incorreta");
+                }
+            }
+            chave = false;
+            System.out.print("Seguindo sua patrulha em acontece outro chamado, alguns policiais desesperados estão precisando de ajuda para prender alguns vilões que fugiram do asilo Arkham ");
+            System.out.print("como são muitos você terá que gastar 200 pontos de habilidade, para prender os vilões... ");
+            System.out.println("Você ajudará os policiais? ");
+            while (chave == false){
+                System.out.println("Digite , ajudar ou ignorar");
+                String z = input.nextLine();
+                
+                if(z.equalsIgnoreCase("ajudar")){
+                    System.out.println("Com seu espírito de héroi você decide ajudar os policias");
+                    if(Personagem2 == true){
+                        Superman.gastar(100);
+                        System.out.println("Poder atual: " + Superman.Poder);
+                    }
+                    else if (Personagem1 == true){
+                        Batman.gastar(100);
+                        System.out.println("Poder atual: " + Batman.Poder);
+                    }
+                    System.out.println("Ao ajuda-los você perde um pouco de energia!");
+                    if(Personagem2 == true){
+                        Superman.cansaso(10);
+                        System.out.println("Energia atual: " + Superman.energia);
+                    }
+                    else if (Personagem1 == true){
+                        Batman.cansaso(10);
+                        System.out.println("Energia atual: " + Batman.energia);
+                    }
+                    if (Superman.Poder == 0){
+                        break;
+                    }
+                    chave = true;
+                }
+                else if(z.equalsIgnoreCase("ignorar")){
+                    policiais = true;
+                    falha = true;
+                    System.out.println("Ao ignorar esse pedido de socorro dos policiais aconteceu um enorme massacre, muitos vilões acabaram devastando Gotham city.");
+                    break;
+                }
+                else{
+                    System.out.println("Opção incorreta");
+                }
+            }
+            if (Superman.Poder == 0 || Batman.Poder == 0){
+                System.out.println("Você ficou sem pontos de habilidade e não tem mais forças");
+                derrotado = true;
+                break;
+            }
+            if (policiais == true){
+                break;
+            }
+            chave = false;
+            System.out.print("Prosseguindo após ajudar os policias acontece uma gravação do Coringa torturando a Lois Lane. Parece que ela está no topo do centro de métropolis ");
+            System.out.println("Você vai salvar ou abandonar a Lois Lane?");
+            while (chave == false){
+                System.out.println("Digite salvar ou abandonar");
+                String v = input.nextLine();
+                if(v.equalsIgnoreCase("salvar")){
+                    System.out.print("Você vai em direção a torre de métropole para salva-la impedindo assim que a vida de Lois Lane fosse tirada... Colocando assim o Coringa atrás das grades ");
+                    System.out.print("no entanto a ida até la foi cansativa perdendo alguns pontos de energia");
+                    chave = true;
+                    if(Personagem2 == true){
+                        Superman.cansaso(30);
+                        System.out.println("Energia atual: " + Superman.energia);
+                    }
+                    else if (Personagem1 == true){
+                        Batman.cansaso(30);
+                        System.out.println("Energia atual: " + Batman.energia);
+                    }
+                    if(Batman.energia == 0 || Superman.energia == 0){
+                        System.out.print("Você se esforçou demais e acabou caindo ao chão. ");
+                        desmaio = true;
+                        break;
+                    }
+                }
+                else if(v.equalsIgnoreCase("abandonar")){
+                    System.out.print("Ao fazer isso Lois Lane teve sua vida tirada, fazendo com que o Superman perdesse sua sanidade e acabasse matando o Coringa com isso... ");
+                    System.out.print("Superman virou um ditador do planeta terra e acabou exterminando aqueles que não obedecessem a ele. ");
+                    abandono = true;
+                    break;
+                }
+                else{
+                    System.out.println("Opção incorreta");
+                }
+            }
+            if (abandono == true){
+                break;
+            }
+            if (desmaio == true){
+                break;
+            }
+            chave = false;
+            System.out.print("Ao salvar Lois Lane superman fica extremamente feliz porém apesar de tudo paracer tranquilo... ");
+            System.out.print("Brainiac invade a terra fazendo alguns humanos de escravo e precisando de ajuda para ser infiltrar na nave de Brainiac a liga da justiça se reúne. ");
+            System.out.println("Reunidos eles sugerem dois planos invadir a nave do jeito do Batman ou pelo plano do Superman:");
+            while (chave == false){
+                System.out.println("Superman plano a = 400 pontos de habilidade");
+                System.out.println("Batman plano b = 800 pontos de habilidade");
+                System.out.println("Digite 'planoa' ou 'planob'");
+                String w = input.nextLine();
+                if (w.equalsIgnoreCase("planoa") && Personagem2 == true && Superman.Poder >= 400){
+                    System.out.println("Você seleciona a estratégia do Superman.");
+                    chave = true;
+                    FinalS = true;
+                }
+                else if (w.equalsIgnoreCase("planob") && Personagem2 == true && Superman.Poder >= 800){
+                    System.out.println("Você seleciona a estratégia do Batman.");
+                    chave = true;
+                    FinalB = true;
+                }
+                if (w.equalsIgnoreCase("planoa") && Personagem1 == true && Batman.Poder >= 400){
+                    System.out.println("Você seleciona a estratégia do Superman.");
+                    chave = true;
+                    FinalS = true;
+                }
+                else if (w.equalsIgnoreCase("planob") && Personagem1 == true && Batman.Poder >= 800){
+                    System.out.println("Você seleciona a estratégia do Batman.");
+                    chave = true;
+                    FinalB = true;
+                }
+                else if (Batman.Poder < 200 || Superman.Poder < 200){
+                    System.out.println("Você não poder suficiente.");
+                    derrotado = true;
+                    break;
+                }
+                else{
+                    System.out.println("");
+                }
+            }
+            falha = true;
+        }
+        if (policiais == true){
+            System.out.println("Com isso você abandonou seu dever de héroi! Lembresse com grandes poderes vem grandes responsabilidades.");
+        }
+        
+        if (derrotado == true){
+            System.out.println("Por não ter força o suficiente você é derrotado.");
+        }
+        if (FinalB == true){
+            System.out.print("Ao escolher a estratégia do Batman ele consegue desativar os campos de força da nave de Brainiac fazendo com que Superman conseguisse infiltrar a nave, e destruisse tudo por dentro... ");
+            System.out.println("Assim salvando a terra e trazendo a paz. Muito bem héroi!");
+        }
+        else if (FinalS == true){
+            System.out.print("Ao selecionar o plano do Superman mesmo com sua força Bruta ele não consegue quebrar a barreira de Brainiac pois sua tecnologia é muito avançada. E acaba sendo atingido com alguns disparos de Kriptonita... ");
+            System.out.print("E com isso Brainiac consegue destruir boa partida da cidade e consegue escapar.");
+            System.out.print("nem sempre o bem vence...");
+        }
+        System.out.println("Fim!");
+        input.close();
+        
+    }
+}
