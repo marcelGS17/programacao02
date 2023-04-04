@@ -1,0 +1,11 @@
+<PERSONAGEM>
+NOME
+Espantalho
+ENERGIA
+100
+
+<PERSONAGEM>
+NOME
+Batman
+ENERGIA     
+100
