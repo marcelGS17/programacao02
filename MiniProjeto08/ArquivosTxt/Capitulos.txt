@@ -1,0 +1,110 @@
+<CAPITULO>
+NOME
+cap1
+TEXTO
+(Sonho ou Pesadelo?) Bem-Vindo a Gotham City aqui quem manda na cidade são os pesadelos do Batman, que vem direto do asilo de Arkham City, O coringa e o charada tem uma mensagem importante para você . BATMAN hahahha!!!! Em uma de suas missões Batman é pego pela toxina do espantalho...Um pouco tonto Batman acorda e se vê pendurado na torre de um relógio...No entanto aparece o Espantalho gigante a sua frente...E ele lhe faz uma proposta com um olhar ameaçador...Então Batman me diga se você quer ver o vislumbre futuro de Gotham? Você deseja cortar a corda do relógio?
+PERSONAGEM
+Batman
+VARIAÇÃO DE ENERGIA
+0
+
+<CAPITULO>
+NOME
+cap2
+TEXTO
+(O salto na mente?) Ao cortar a corda, Batman despenca em um buraco enorme...E ao cair ele entra nos profundos pesadelos do Espantalho.No entanto Batman já sabia o que iria enfrentar e precisaria neutralizar a toxina...Entretanto os pesadelos pareciam cada vez piores e o verdadeiro espantalho aparece na sua frente...Ou será mais uma ilusão da sua mente? Batman decide neutralizar a toxina ou enfrentar o espantalho?
+PERSONAGEM       
+Batman
+VARIAÇÃO DE ENERGIA
+0
+
+<CAPITULO>
+NOME
+cap3
+TEXTO
+(A saída) Ao neutralizar a toxina Batman, recupera sua consciência no entanto espantalho tentava fugir, ele havia deixado Batman preso em um fábrica com explosivos...Mais como Batman é esperto ele uso seus equipamentos a seu favor.Volte espantalho isso aqui não acabou! Espantalho corre imediatamente e acaba tropecendo.E sem perceber a pouco tempo atrás o próprio Batman havia injetado toxina no espantalho...O que é isso estou vendo milhares de morcegos, SAIAM DA MINHA FRENTE! e derrepente surge o verdadeiro Batman na sua frente e o noucauteia.E FINALMENTE Batman o derrota saindo daquele pesadelo terrível e o levando a prisão.Espantalho é pego e perde 100 de vida.Parabéns você trouxe Justiça e GOTHAM agora pode ter uma noite tranquila!
+PERSONAGEM       
+Espantalho
+VARIAÇÃO DE ENERGIA    
+-100
+
+<CAPITULO>
+NOME
+cap4
+TEXTO
+(A fuga) Ao tentar golpear o espantalho a sua frente...O Batman acaba caindo em mais uma de suas ilusões... O que foi Batman não sabe disntinguir o que é real?Espantalho começa a ataca-lo... Porem com as impressionantes habilidades de combate do Batman ele consegue o superar.E espantalho desiste de tentar mata-lo e começa a correr para a sua rota de fuga.E o Batman mesmo atordoado vai persegui-lo Você já não aguenta mais Batman as toxinas,estão o ferindo gravemente.Volte aki espantalho eu irei derrota-lo. Ao passar muito tempo com a toxina na pele,Batman desmaia perdendo 50 de vida...DEIXANDO ASSIM O ESPANTALHO FUGIR DAS MÃOS DO VIGILANTE MASCARADO!
+PERSONAGEM       
+Batman
+VARIAÇÃO DE ENERGIA    
+10
+
+<CAPITULO>
+NOME
+cap5
+TEXTO
+(O caos) Batman decide não cortar a corda. no entanto ao esperar demais o nosso vigilante mascarado inala muita toxina do espantalho e com isso começa a enlouquecer e gritar com as dores fortes...Fazendo o Batman perder 90 de sua vitalidade E sem o héroi mascarado para proteger Gotham a cidade sucumbiu nas mãos do espantalho...Ele libertou todos os vilões do Asilo de ARKHAM E algum tempo depois Batman foi encontrado em uma das celas principais,porém ele já não era mais o mesmo...Estava plenamente louco e ferido das torturas do espantalho.E COM ISSO VOCÊ DEIXOU GOTHAM NAS MÃOS DO INIMIGOS.FIM!
+PERSONAGEM       
+Batman
+VARIAÇÃO DE ENERGIA    
+-100
+
+<CAPITULO>
+NOME
+cap6
+TEXTO
+(A mão amiga) O batman ganha a ajuda de uma parceiro no combate ao crime, em uma de suar perseguições atrás de bandidos o batman conhece seu parceiro Robin conhecido como o menino Prodígio...
+PERSONAGEM       
+Batman
+VARIAÇÃO DE ENERGIA    
++100
+
+<ESCOLHA>
+CAPITULO ORIGEM
+cap1
+TEXTO DIGITADO
+1
+TEXTO MOSTRADO
+sim
+CAPITULO DESTINO
+cap2
+
+
+<ESCOLHA>
+CAPITULO ORIGEM
+cap1
+TEXTO DIGITADO
+2
+TEXTO MOSTRADO
+não
+CAPITULO DESTINO
+cap5
+
+<ESCOLHA>
+CAPITULO ORIGEM
+cap2
+TEXTO DIGITADO
+1
+TEXTO MOSTRADO
+curar
+CAPITULO DESTINO
+cap3
+
+<ESCOLHA>
+CAPITULO ORIGEM
+cap2
+TEXTO DIGITADO
+2
+TEXTO MOSTRADO
+lutar
+CAPITULO DESTINO
+cap4
+
+<ESCOLHA>
+CAPITULO ORIGEM
+cap2
+TEXTO DIGITADO
+3
+TEXTO MOSTRADO
+buscar ajuda
+CAPITULO DESTINO
+cap6
